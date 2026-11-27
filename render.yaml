@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: genocide-belarus-films
+    runtime: docker
+    plan: starter
+    autoDeployTrigger: "off"
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
